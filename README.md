@@ -59,15 +59,25 @@ developing a process, and it's helpful to document your steps as part of
 developing your own process.
 
 ## Your Notes Here
-
 - Add a new toy when the toy form is submitted
+ tried to create new toy in postman 
+ got Completed 500 Internal Server Error 
+  
+- How I debugged: checked server logs 
+got NameError (uninitialized constant ToysController::Toys): 
+changed Toys to Toy in ToysController
 
-  - How I debugged:
+-Update the number of likes for a toy
+   How I debugged:run PATCH /toys/1 in postman
+  -got no content in response 
+  -added render json to update action
 
-- Update the number of likes for a toy
+  
 
-  - How I debugged:
-
-- Donate a toy to Goodwill (and delete it from our database)
-
-  - How I debugged:
+-Donate a toy to Goodwill (and delete it from our database)
+   -Tried deleting a toy using postman
+   -got an error
+-How I debugged:
+  checked server logs
+  got No route matches [DELETE]
+  added destroy toys resources
